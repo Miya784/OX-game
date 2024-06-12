@@ -8,7 +8,7 @@ const Game = () => {
 
   const [size, setSize] = useState(3);
   const [table, setTable] = useState(generateEmptyTable(size));
-  const [value, setValue] = useState('X'); // Start with 'X'
+  const [value, setValue] = useState('X');
   const [moveCount, setMoveCount] = useState(1);
 
 const resetTable = (winner) => {
@@ -20,7 +20,6 @@ const resetTable = (winner) => {
 }
 
   useEffect(() => {
-    // Alternate between 'X' and 'O' when table changes
     if (value === 'X') {
       setValue('O');
     } else {
